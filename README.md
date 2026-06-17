@@ -54,8 +54,8 @@ Adjar replaces the console with a four-step loop your agent can participate in:
    anything goes live.
 3. **Apply** — Approve and run `adjar apply`. Changes ship to Google Ads and
    assigned IDs are written back into your config.
-4. **Measure** — Fresh performance data lands in your repo as a daily Markdown
-   report, feeding the next round.
+4. **Measure** — Run `adjar report` to pull fresh performance data into your
+   repo as a Markdown report, feeding the next round.
 
 ```bash
 # Export your live account into version-controlled TOML
@@ -66,6 +66,9 @@ adjar plan --config config/google.toml
 
 # Approve and ship — fully reversible
 adjar apply --config config/google.toml
+
+# Pull performance data back into your repo to measure
+adjar report --config config/google.toml -o reports/google.md
 ```
 
 Learn more in the [docs](https://www.adjar.ai/docs).
